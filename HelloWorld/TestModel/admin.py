@@ -3,7 +3,11 @@ from TestModel.models import Test, Contact, Tag
 
 
 # Register your models here.
+class TagInline(admin.TabularInline):
+    model = Tag
+
 class ContactAdmin(admin.ModelAdmin):
+    inlines = [TagInline]
     fieldsets = (
         ['Main', {
             'fields': ('name', 'email'),
