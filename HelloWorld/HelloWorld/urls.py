@@ -7,4 +7,5 @@ urlpatterns = [
     url(r'^query', testdb.query),
     url(r'^update', testdb.update),
     url(r'^delete', testdb.delete),
+    url(r'^search-form$',search.search_form)
 ]
