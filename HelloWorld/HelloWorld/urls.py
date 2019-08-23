@@ -2,8 +2,10 @@ from django.conf.urls import *
 from . import view, testdb
 from . import view, search
 from . import view, search2
+from django.contrib import admin
 
 urlpatterns = [
+    url(r'^admin',admin.site.urls),
     url(r'^hello$', view.hello),
     url(r'^testdb$', testdb.testdb),
     url(r'^query', testdb.query),
