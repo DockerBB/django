@@ -6,7 +6,7 @@ from django.shortcuts import render
 
 # 表单
 def search_form(request):
-    return render('search_form.html')
+    return render(request,'search_form.html')
 
 
 # 接收请求数据
